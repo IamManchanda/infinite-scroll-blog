@@ -21,8 +21,12 @@ async function showPosts() {
     postEl.innerHTML = `
       <div class="number">${post.id}</div>
       <div class="post-info">
-        <h2 class="post-title">${post.title}</h2>
-        <p class="post-body">${post.body}</p>
+        <h2 class="post-title">
+          ${post.title[0].toUpperCase() + post.title.slice(1)}
+        </h2>
+        <p class="post-body">
+          ${post.body[0].toUpperCase() + post.body.slice(1)}
+        </p>
       </div>
     `;
     postsContainer.appendChild(postEl);
